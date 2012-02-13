@@ -1,0 +1,53 @@
+bind 'R' wrap
+bind 'r' resize
+bind '+' resize +5
+bind '-' resize -5
+autodetach            on              # default: on
+crlf                  off             # default: off
+deflogin              off             # default: on
+hardcopy_append       on              # default: off
+startup_message       off             # default: on
+vbell                 on             # default: ???
+termcapinfo xterm     ti@:te@
+termcapinfo linux "ve=\E[?25h\E[?17;0;64c"
+defscrollback         1000            # default: 100
+silencewait           15              # default: 30
+shell                 bash
+caption always "%{rk}%H %{gk}%c %{yk}%M%d %{wk}%?%-Lw%?%{by}%n*%f %t%?(%u)%?%{wk}%?%+Lw%?"
+#hardstatus alwayslastline "%{rw}%H%{wk}|%c|%M%d|%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{wk}%?%+Lw%?"
+sorendition    kG # black  on bold green
+activity              "%C -> %n%f %t activity!"
+bell                  "------------------------------- %n%f - %t ------------------------------"
+pow_detach_msg        "BYE"
+vbell_msg             " *beep* "
+msgwait 1
+version
+msgwait 2
+# defutf8 on
+# segurança: desligar algumas tecla perigosas
+bind k
+bind ^k
+bind '^\'
+bind z
+bind ^z
+bind x
+bind s
+bind ^s
+
+# e aqui fica o kill
+bind 'K' kill
+
+### do /etc/screenrc
+termcap  facit|vt100|xterm LP:G0
+terminfo facit|vt100|xterm LP:G0
+#the vt100 description does not mention "dl". *sigh*
+termcap  vt100 dl=5\E[M
+terminfo vt100 dl=5\E[M
+
+shelltitle '] |SHELL'
+
+#disparando uns programas automaticamente
+#screen -t EMAIL		0	mutt
+#screen -t IM		1	/home/hackwiz/.pebrot/pebrot
+#screen -t BLOG		2	
+#screen -t ZZ		3	bash -c "zznoticiaslinux; echo; echo ---FIM---; read"
