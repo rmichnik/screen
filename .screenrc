@@ -7,9 +7,12 @@ hardstatus alwayslastline
 #hardstatus string '%{= Kd} %{= Kd}%-w%{= Kr}[%{= KW}%n %t%{= Kr}]%{= Kd}%+w %-= %{KG} %H%{KW}|%{KY}%101`%{KW}|%D %M %d %Y%{= Kc} %C%A%{-}'
 #hardstatus alwayslastline "%{rw}%H%{wk}|%{wr}%c%{wk}|%d%M|%?%-Lw%?%{wb}%n*%f%t%?(%u)%?%{wk}%?%+Lw%?"
 #hardstatus string '%{= kG}[ %{G}%H %{g}][%3= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
+
 #hardstatus string '%{gk}[ %{G}%H %{g}][%= %{w}%?%-w%?%{=b kR}(%{W}[%{Y}%n%{W}] %t%?(%u)%?%{=b kR})%{= kw}%?%+w%?%?%= %{g}][%{Y}%l%{g}]%{=b C}[ %D %d/%M/%Y %c ]%{W}'
+
 #hardstatus string '%{gk}[%{wk}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= w}%?%+Lw%?%? %{g}][%{d}%l%{g}][ %{= w}%Y/%m/%d %0C:%s%a%{g} ]%{W}'
-caption always "%{rk}%H%{gk}%c %{yk}%M%d %{wk}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{wk}%?%+Lw%? | %{rk} Load: %l %{wk}"
+#caption always "%{rk}%H%{gk}%c %{yk}%M%d %{wk}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{wk}%?%+Lw%? | %{Y} Load: %l%{g} %{W}"
+caption always "%{rk}%H%{gk}%c %{mk}%D %{yk}%d%{ck}/%{yk}%m%{ck}/%{yk}%Y %{wk}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{wk}%?%+Lw%? %{g} %=%{rk}Load %{wk}%l"
 
 attrcolor b ".I"
 
